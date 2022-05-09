@@ -1,7 +1,9 @@
-$(window).on("scroll", function() {
-  // Если высота больше 200px 
-  // Добавляем классу header класс fixed
-    if ($(window).scrollTop() > 200) $('.header').addClass('fixed');
-  // Иначе удаляем класс fixed
-          else $('.header').removeClass('fixed');
-    });
+ var menu = $("#header");
+  $(window).scroll(function() {
+    var top = $(this).scrollTop();
+    if ( top >= 100 ) {
+      menu.css(background-color: 'green');
+    } else if ( top <= 200 ) {
+      menu.css(background-color: 'blue');
+    }
+  });

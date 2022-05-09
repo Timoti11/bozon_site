@@ -7,28 +7,76 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
-	<title></title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Signika:wght@600&display=swap" rel="stylesheet">
+	<title>BOZON - приватный ванильный сервер стримеров</title>
 </head>
 <body>
-	<header>
-		<div class="menu">
-
-			<div class="menu__nav">
-				<a href="#" class="nav__href"><p> О проекте </p></a>
-				<a href="#" class="nav__href"><p> Правила </p></a>
-				<a href="#" class="nav__href"><p> Как попасть? </p></a>
-				<a href="#" class="nav__href"><p> Сезоны </p></a>
+	<header id="header">
+		<div class="cont cont_header">
+			<div class="menu">
+				<div class="menu__logo">
+					<div class="logo_div logo_img"></div>
+					<div class="logo_div logo_txt">BOZON</div>
+				</div>
+				<div class="menu__nav">
+					<a href="#" class="nav__href" style="margin-left: 0;"><p style="font-weight: 400"> Главная </p></a>
+					<a href="/about" class="nav__href"><p> О проекте </p></a>
+					<a href="/rules" class="nav__href"><p> Правила </p></a>
+					<a href="/welcome" class="nav__href"><p> Как попасть? </p></a>
+					<a href="/faq" class="nav__href"><p> F.A.Q. </p></a>
+					<a href="/RoadMap" class="nav__href"><p> Наш путь </p></a>
+				</div>
+				<button class="menu__button button-buy"><p class="button-buy_txt">Купить проходку</p></button>
 			</div>
 		</div>
 	</header>
-	<div class="main">
-		<div class="cont">
-			dsad
+	<main>
+		<div class="welcome min-h">
+			<div class="black_bg"></div>
+			<div class="welcome__plak">
+				<div class="welcome__txt">
+					3 сезон уже рядом...
+				</div>
+				<button class="welcome__button button-buy"><p class="button-buy_txt">Зайти на сервер</p></button>
+			</div>
 		</div>
-	</div>
+		<div class="plus min-h">
+			<div class="cont">
+				<div class="row">
+					<div class="row__group">
+						<div class="row_obj row__img"></div>
+						<div class="row_obj row__txt"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row__group">
+						<div class="row_obj row__txt"></div>
+						<div class="row_obj row__img"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row__group">
+						<div class="row_obj row__img"></div>
+						<div class="row_obj row__txt"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row__group">
+						<div class="row_obj row__txt"></div>
+						<div class="row_obj row__img"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="squad min-h">
+				<iframe src="https://player.twitch.tv/?channel=timoti11&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+		</div>
+		<div class="buy min-h"></div>
+	</main>
 	<footer>
 		
 	</footer>
+	<!--<script type="text/javascript" src="js/jq.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>-->
 </body>
 </html>
