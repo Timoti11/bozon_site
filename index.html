@@ -4,13 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/cl.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/loader.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Signika:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Signika:wght@600&display=swap" rel="stylesheet">
 	<title>BOZON - приватный ванильный сервер стримеров</title>
 </head>
 <body>
+	<script src="js/jq.js"></script>
+	<script src="js/loader.js"></script>
+	<div class="loader">
+		<div class="loader_gif"></div>
+	</div>
 	<header id="header">
 		<div class="cont cont_header">
 			<div class="menu">
@@ -37,46 +44,57 @@
 				<div class="welcome__txt">
 					3 сезон уже рядом...
 				</div>
-				<button class="welcome__button button-buy"><p class="button-buy_txt">Зайти на сервер</p></button>
+				<button class="welcome__button button-buy" data-clipboard-text="bozon.host"><p class="button-buy_txt" >Зайти на сервер</p></button>
 			</div>
 		</div>
-		<div class="plus min-h">
-			<div class="cont">
-				<div class="row">
-					<div class="row__group">
-						<div class="row_obj row__img"></div>
-						<div class="row_obj row__txt"></div>
+		
+		<div id="copied" style="top: 50px; opacity: 0">IP bozon.host был скопирован</div>
+
+		<div class="IP"></div>
+
+		<div class="buy min-h">
+			<div class="buy__center">
+				<div class="buy__var var1">
+					<p class="buy__var-txt">Платно</p>
+					<div class="buy__var-plus">
+						<ul>
+							<li>Моментальое добавление в вайтлист</li>
+							<li>Возможность перенести аккаунт в случае утраты</li>
+							<li>Бесплатный выбор цвета ника</li>
+							<li>Отдельная благодарность от создателя <3</li>
+						</ul>
+					</div>
+					<div class="buy__var-down">
+						<div class="price">234₽.</div>
+						<p class="old-check-txt">Уже играл? Получи доступ всего за 123₽!</p>
+						<button class="button-buy but__var_btn">
+							<p class="button-buy_txt">Купить проходку</p>
+						</button>
 					</div>
 				</div>
-				<div class="row">
-					<div class="row__group">
-						<div class="row_obj row__txt"></div>
-						<div class="row_obj row__img"></div>
+				<div class="buy__var var2">
+					<p class="buy__var-txt">Бесплатно</p>
+					<div class="buy__var-plus">
+						<ul class="besp">
+							<li>Ожидание добавления до двух суток</li>
+							<li>Создателю не на что жить:(</li>
+							<li>ЗаТо БеСпЛаТнО</li>
+						</ul>
 					</div>
-				</div>
-				<div class="row">
-					<div class="row__group">
-						<div class="row_obj row__img"></div>
-						<div class="row_obj row__txt"></div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="row__group">
-						<div class="row_obj row__txt"></div>
-						<div class="row_obj row__img"></div>
+					<div class="buy__var-down">
+						<div class="price">Бесплатно?</div>
+						<div class="price"></div>
+						<button class="button-buy but__var_btn">
+							<p class="button-buy_txt">Перейти к условиям</p>
+						</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="squad min-h">
-				<iframe src="https://player.twitch.tv/?channel=timoti11&parent=timoti11.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-		</div>
-		<div class="buy min-h"></div>
 	</main>
 	<footer>
-		
 	</footer>
-	<!--<script type="text/javascript" src="js/jq.js"></script>
-	<script type="text/javascript" src="js/scroll.js"></script>-->
+<script src="js/click.js"></script>
+<script src="js/scroll.js"></script>
 </body>
 </html>

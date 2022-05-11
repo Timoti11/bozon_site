@@ -7,7 +7,7 @@ body {
 
 p {
 	font-family: 'Inter', sans-serif;
-	color: #fafafa;
+	color: var(--white);
 	font-weight: 500;
 }
 
@@ -48,6 +48,7 @@ header {
 .logo_txt {
 	font-family: 'Signika', sans-serif;
 	font-size: 46px;
+	user-select: none;
 }
 
 .menu__nav {
@@ -71,7 +72,7 @@ header {
 }
 
 .button-buy {
-	background: #00B4DB;
+	background: var(--sec);;
 	border-radius: 7px;
 	padding: 10px 30px 10px 30px;
 	user-select: none;
@@ -97,6 +98,7 @@ header {
 .button-buy_txt {
 	text-align: center;
 	font-size: 16px;
+	white-space: nowrap;
 }
 
 .welcome__button {
@@ -174,5 +176,116 @@ a {
 }
 
 .buy {
-	background-color: yellow;
+	background-color: var(--black);
+	position: relative;
+}
+
+.buy__center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+}
+
+.buy__var {
+	background-color: var(--gray);
+	width: 350px;
+	height: 450px;
+	display: inline-block;
+	border-radius: 10px;
+	margin: 70px;
+	padding: 35px;
+}
+
+.var1 {
+	background-color: var(--black);
+	box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.15);
+}
+
+.buy__var-txt {
+	font-size: 28px;
+	text-align: center;
+}
+
+.buy__var button {
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.buy__var-plu {
+	position: inherit;
+}
+
+.buy__var-plus ul {
+    list-style-type: none;
+    margin-top: 35px;
+    line-height: 35px;
+    text-indent: -18px;
+    margin-left: 10px;
+}
+
+.buy__var-plus li {
+	text-align: left;
+}
+
+.buy__var-plus li::before {
+	color: var(--white);
+    content:"\2022";
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.price {
+	text-align: center;
+	font-size: 36px;
+	color: var(--sec);
+	font-weight: 600;
+}
+
+.old-check-txt {
+	color: rgba(255, 255, 255, 0.4);
+	font-weight: 300;
+	font-size: 14px;
+	text-align: center;
+	position: absolute;
+	bottom: -100px;
+	line-height: 20px;
+}
+
+.IP {
+	width: 100%;
+	height: 120px;
+	background-color: var(--sec);
+}
+
+.besp li {
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.besp li::before {
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.buy__var-down {
+	position: absolute;
+	bottom: 100px;
+	margin-left: 175px;
+	transform: translateX(-50%);
+}
+
+.but__var_btn {
+	margin-top: 25px;
+}
+
+#copied {
+	width: 200px;
+	background-color: rgba(31, 31, 31, 0.8);
+	border-radius: 5px;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	padding: 10px;
+	animation: showBlock 1s linear forwards;
 }
