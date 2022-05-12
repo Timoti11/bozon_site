@@ -1,8 +1,13 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Inter', sans-serif;
 	color: #fafafa;
 	font-weight: 500;
 	background-color: black;
+	overflow: hidden;
 }
 
 p {
@@ -12,7 +17,7 @@ p {
 }
 
 header {
-	padding: 10px 0px 10px 0px;
+	padding: 10px;
 	width: 100vw;
 	position: fixed;
 	z-index: 10;
@@ -20,6 +25,23 @@ header {
     backdrop-filter: blur(2px);
     -webkit-box-shadow: 0 0 10px 8px rgba(0,0,0,0.3);
 	box-shadow: 0 0 10px 8px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar {
+	width: 10px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+	background: var(--grayM);        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+	background-color: var(--sec);    /* цвет плашки */
+	border-radius: 20px;       /* закругления плашки */
+	border: 2px solid var(--gray);  /* padding вокруг плашки */
+}
+
+a {
+	text-decoration:none;
+	color: #fafafa;
 }
 
 .menu {
@@ -38,8 +60,8 @@ header {
 
 .logo_img {
 	background-image: url(../img/logo.svg);
-	width: 65px;
-	height: 65px;
+	width: 60px;
+	height: 60px;
 	background-size: contain;
 	-webkit-filter: invert(100%);
     filter: invert(100%);
@@ -47,7 +69,7 @@ header {
 
 .logo_txt {
 	font-family: 'Signika', sans-serif;
-	font-size: 46px;
+	font-size: 44px;
 	user-select: none;
 }
 
@@ -63,16 +85,43 @@ header {
 .nav__href {
 	display: inline-block;
 	margin-left: 30px;
+}
+
+.nav_txt {
 	font-size: 16px;
 }
 
-.nav__href p:hover {
-	color: #00a9cf;
-	transition: 0.1s;
+.nav_txt:hover {
+	color: var(--sec);
+	transition: 0.2s;
+}
+
+.nav_select {
+	color: var(--sec);
+	font-weight: 500;
+	font-size: 120%;
+	position: relative;
+}
+
+.nav_select:after {
+	width: 100%;
+	content: "";
+	color: var(--sec);
+	border-bottom: 3px solid var(--sec);
+	border-radius: 0px 0px 3px 3px;
+	position: absolute;
+	margin-top: 10px;
+	display: block;
+}
+
+.nav__arrow_down {
+	font-size: 10px;
+	margin-left: 3px;
+	vertical-align: middle;
 }
 
 .button-buy {
-	background: var(--sec);;
+	background: var(--sec);
 	border-radius: 7px;
 	padding: 10px 30px 10px 30px;
 	user-select: none;
@@ -88,11 +137,13 @@ header {
 }
 
 .button-buy:hover {
-	background: #00a9cf;
+	background-color: var(--sec);
+	filter: brightness(0.8);
 }
 
 .button-buy:active {
-	background: #009ec2;
+	background-color: var(--sec);
+	filter: brightness(0.6);
 }
 
 .button-buy_txt {
@@ -105,11 +156,6 @@ header {
 	margin-top: 30px;
 	margin-left: 50%;
 	transform: translateX(-50%);
-}
-
-a {
-	text-decoration:none;
-	color: #fafafa;
 }
 
 .cont {
@@ -131,7 +177,7 @@ a {
 .black_bg {
 	width: 100%;
 	min-height: calc(100vh - 100px);
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .welcome__plak {
@@ -171,10 +217,6 @@ a {
 	display: inline-block;
 }
 
-.squad {
-	background-color: blue;
-}
-
 .buy {
 	background-color: var(--black);
 	position: relative;
@@ -201,6 +243,10 @@ a {
 .var1 {
 	background-color: var(--black);
 	box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.15);
+}
+
+.var2 {
+
 }
 
 .buy__var-txt {
@@ -253,6 +299,11 @@ a {
 	line-height: 20px;
 }
 
+.old-check-txt:hover {
+	color: rgba(255, 255, 255, 0.6);
+	transition: .3s;
+}
+
 .IP {
 	width: 100%;
 	height: 120px;
@@ -288,4 +339,30 @@ a {
 	text-align: center;
 	padding: 10px;
 	animation: showBlock 1s linear forwards;
+	z-index: 101;
+}
+
+.img__png {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-image: url(../img/tima2.png);
+	width: 320px;
+	height: 120px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: none;
+	display: block;
+}
+
+footer {
+	width: 100%;
+	height: 120px;
+	background-color: var(--sec);
+}
+
+.IP-txt {
+	transform: translate(-50%, -50%);
+	line-height: 15px;
+	font-weight: 500;
 }

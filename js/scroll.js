@@ -1,4 +1,4 @@
-let clipboard = new ClipboardJS('.welcome__button');
+let clipboard = new ClipboardJS('.IP');
  
 
 clipboard.on('success', function(e) {
@@ -39,7 +39,6 @@ function secondStep(){
 			{
 		    	opacity: 0,
 		    	top: "-=50",
-		    	height: "toggle",
 		  	}, 500
 		);
 }

@@ -14,11 +14,10 @@
 </head>
 <body>
 	<script src="js/jq.js"></script>
-	<script src="js/loader.js"></script>
 	<div class="loader">
 		<div class="loader_gif"></div>
 	</div>
-	<header id="header">
+	<header id="header" class="header">
 		<div class="cont cont_header">
 			<div class="menu">
 				<div class="menu__logo">
@@ -26,12 +25,12 @@
 					<div class="logo_div logo_txt">BOZON</div>
 				</div>
 				<div class="menu__nav">
-					<a href="#" class="nav__href" style="margin-left: 0;"><p style="font-weight: 400"> Главная </p></a>
-					<a href="/about" class="nav__href"><p> О проекте </p></a>
-					<a href="/rules" class="nav__href"><p> Правила </p></a>
-					<a href="/welcome" class="nav__href"><p> Как попасть? </p></a>
-					<a href="/faq" class="nav__href"><p> F.A.Q. </p></a>
-					<a href="/RoadMap" class="nav__href"><p> Наш путь </p></a>
+					<a href="#" class="nav__href" style="margin-left: 0;"><p class="nav_select"> Главная </p></a>
+					<a href="/about" class="nav__href"><p class="nav_txt"> О проекте </p></a>
+					<a href="/rules" class="nav__href"><p class="nav_txt"> Правила </p></a>
+					<a href="/welcome" class="nav__href"><p class="nav_txt"> Как попасть? </p></a>
+					<a href="/faq" class="nav__href"><p class="nav_txt "> F.A.Q. </p></a>
+					<a href="/squad" class="nav__href nav__community"><p class="nav_txt"> Комьюнити <span class="nav__arrow_down">▼</span></p></a>
 				</div>
 				<button class="menu__button button-buy"><p class="button-buy_txt">Купить проходку</p></button>
 			</div>
@@ -44,13 +43,20 @@
 				<div class="welcome__txt">
 					3 сезон уже рядом...
 				</div>
-				<button class="welcome__button button-buy" data-clipboard-text="bozon.host"><p class="button-buy_txt" >Зайти на сервер</p></button>
+				<a href="#auto-scroll"><button class="welcome__button button-buy" data-clipboard-text="bozon.host"><p class="button-buy_txt">Зайти на сервер</p></button></a>
 			</div>
 		</div>
 		
 		<div id="copied" style="top: 50px; opacity: 0">IP bozon.host был скопирован</div>
 
-		<div class="IP"></div>
+		<div class="IP">
+			<p class="IP-txt">IP: bozon.host
+				<br>
+				1.18.2
+				<br>
+				Только java-версия!
+		</p>
+		</div>
 
 		<div class="buy min-h">
 			<div class="buy__center">
@@ -66,9 +72,9 @@
 					</div>
 					<div class="buy__var-down">
 						<div class="price">234₽.</div>
-						<p class="old-check-txt">Уже играл? Получи доступ всего за 123₽!</p>
+						<p class="old-check-txt" title="Укажи промокод, который можно получить в лс">Уже играл? Получи доступ всего за 123₽!</p>
 						<button class="button-buy but__var_btn">
-							<p class="button-buy_txt">Купить проходку</p>
+							<p class="button-buy_txt" id="auto-scroll">Купить проходку</p>
 						</button>
 					</div>
 				</div>
@@ -95,6 +101,11 @@
 	<footer>
 	</footer>
 <script src="js/click.js"></script>
+<script src="js/gif.js"></script>
 <script src="js/scroll.js"></script>
+<script src="js/loader.js"></script>
+<a href="https://www.twitch.tv/timoti11">
+	<div class="img__png" id="gif-js"></div>
+</a>
 </body>
 </html>
