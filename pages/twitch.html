@@ -2,41 +2,27 @@
 <html>
 <head>
   <title></title>
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/cl.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Signika:wght@600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: white">
 
+<a name="primer_1_0"></a>
 
+<?
 
+if($_GET[name_example]) { echo "отправленные данные: ". strip_tags($_GET[name_example]) ;}
 
-<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+?>
 
-
-<div id="timoti11"></div>
-
-
-<script type="text/javascript">
-  var ch_timoti11 = {
-    width: 960,
-    height: 540,
-    channel: "timoti11",
-    video: "<video ID>",
-    collection: "<collection ID>",
-    parent: ["https://timoti11.github.io"]
-  };
-  var ch_Mazon = {
-    width: 960,
-    height: 540,
-    channel: "Mazon_Alex",
-    video: "<video ID>",
-    collection: "<collection ID>",
-    parent: ["https://timoti11.github.io"]
-  };
-  var player = new Twitch.Player("timoti11", ch_timoti11);
-  var player2 = new Twitch.Player("timoti11", ch_Mazon);
-  player.setVolume(0.5);
-</script>
-
-
+<form action="#primer_1_0" method="get">
+  <input type="text" name="name_example" value="Значение_1">
+  <input type="submit" value="ОТПРАВИТЬ">
+</form>
 
 </body>
 </html>
